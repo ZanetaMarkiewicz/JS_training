@@ -1,7 +1,7 @@
 <template>
   <h1>User Info</h1>
   <div v-if="shouldShowValidationErrors">
-    <div v-for="error in validationErrors" :key="error">
+    <div v-for="error in validationErrors" :key="error" class="error">
       {{ error }}
     </div>
   </div>
@@ -10,12 +10,6 @@
     <input placeholder="Age" type="number" v-model.number="age" />
     <input placeholder="Address" v-model="address" />
     <button @click="displayData">Save</button>
-  </div>
-  <div v-if="personData">
-    <h3>
-      {{ personData.name.first }} {{ personData.name.last }}
-      {{ personData.picture.thumbnail }}
-    </h3>
   </div>
 </template>
 <script>
@@ -63,3 +57,6 @@ export default {
   },
 };
 </script>
+<style>
+.error {color: red;}
+</style>

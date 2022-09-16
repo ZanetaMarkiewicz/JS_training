@@ -21,3 +21,16 @@ export default {
   props: ["numberOfItems"],
 };
 </script>
+
+<style scoped>
+#template {
+  list-style: none;
+  display: inline-block;
+  background-color: #231858;
+  color: white;
+  width: 70px;
+  padding: 5px 20px;
+  margin: 5px;
+  text-align: center;
+}
+</style>

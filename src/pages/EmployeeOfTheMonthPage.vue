@@ -1,10 +1,10 @@
 <template>
-  <h1 v-flash="100">Employe of the Month</h1>
+  <h1 v-flash="300">Employe of the Month</h1>
   <div v-if="personData">
     <h3>
       {{ personData.name.first }} {{ personData.name.last }}
-      {{ personData.picture.thumbnail }}
     </h3>
+    <img :src="personData.picture.large"/>
   </div>
 </template>
 <script>
